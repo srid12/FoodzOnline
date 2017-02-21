@@ -1,0 +1,168 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin-left: 1%;
+  margin-right: 1%;
+}
+#homeContainer{
+  width:100%
+  min-height:500px;
+}
+#menu{
+  width:60%;
+  min-height:500px;
+  border: 1px solid black;
+  display: inline-block;
+  background-color: rgb(244, 242, 246);
+  float:left;
+}
+
+.navBar{
+  background-color: rgb(218, 185, 181);
+  text-align: center;
+  font-size: 20px;
+  vertical-align: center;
+  margin-bottom: 10px;
+}
+
+#checkoutOrder{
+  border: 1px solid black;
+  margin: 3%;
+  background-color: rgb(244, 242, 246);
+  padding:3%;
+}
+
+.buttonContainer{
+  text-align: center;
+}
+#addressBox{
+  border: 1px solid black;
+  margin: 3%;
+  background-color: rgb(244, 242, 246);
+  padding:3%;
+}
+
+.heading{
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#order{
+  width:35%;
+  min-height:500px;
+  border: 1px solid black;
+  display: inline-block;
+  float:left;
+  background-color: rgb(244, 242, 246);
+  text-align: center;
+}
+
+
+
+.dishType{
+
+}
+.dishHeaderSNo{
+  display: table-cell;
+  width:10%;
+}
+
+.dishHeader{
+  display: table;
+  width:100%;
+}
+
+.dishNameHeader{
+  display: table-cell;
+  width: 30%;
+}
+
+.priceHeader{
+  display: table-cell;
+  width:40%;
+}
+.individualDishRow{
+  display: table;
+  width: 100%;
+}
+.dishIndex{
+  display: table-cell;
+  width:10%;
+}
+
+.dishName{
+ display: table-cell;
+ width: 30%;
+}
+
+.dishPrice{
+  display: table-cell;
+  width: 20%;
+}
+
+.dishIcon{
+  display: table-cell;
+  width: 10%;
+}
+
+.orderRow{
+  display: table;
+  width:100%;
+}
+
+.orderName{
+  display: table-cell;
+  width:35%;
+}
+
+.orderCount{
+  display: table-cell;
+  width:35%;
+}
+
+.orderAmount{
+  display: table-cell;
+  width:30%;
+}
+
+.buttonStyle{
+  padding: 10px;
+  width:100px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin:0 auto;
+  background-color: green;
+  color: white;
+  margin-top: 15px;
+}
+
+input.ng-invalid {
+  border: 1px solid red;
+}
+
+input.ng-valid {
+  border: 1px solid black;
+}
+
+.col-12{
+  width: 100%;
+  display: table;
+}
+.col-4{
+  width: 33.3%;
+  display: table-cell;
+}
+.col-3{
+  width: 25%;
+  display: table-cell;
+}
+.col-6{
+  width:50%;
+  display: table-cell;
+}
+
+.formInput{
+  margin-bottom: 10px;
+}

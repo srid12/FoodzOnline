@@ -1,0 +1,85 @@
+<div ng-controller="checkoutController">
+  <div class="heading">
+    <div id="orderSummary">Checkout</div>
+
+    <div class="col-12 formInput">
+      <div class="col-6">
+        <div>First Name</div>
+        <input id="firstName" class="col-6" ng-model="address.firstName" required type="text" />
+      </div>
+
+    <div class="col-6">
+      <div>Last Name</div>
+      <input id="lastName" class="col-6" ng-model="address.lastName" required type="text" />
+    </div>
+
+    </div>
+
+    <div class="formInput">
+      <div>Address1</div>
+      <input id="address1" class="col-6" ng-model="address.address1" required type="text" />
+    </div>
+
+    <div class="formInput">
+      <div>Address2</div>
+      <input id="address2" class="col-6" ng-model="address.address2" required type="text" />
+    </div>
+
+  <div class="col-12 formInput">
+
+    <div class="col-4">
+      <div>City</div>
+      <input  class="col-6" id="city" ng-model="address.city" required type="text" />
+    </div>
+
+    <div class="col-4">
+      <div>State</div>
+      <input class="col-6" id="state" ng-model="address.state" required type="text" />
+    </div>
+
+    <div class="col-4">
+      <div>Pin</div>
+      <input class="col-6" id="pin" type="number" ng-model="address.pin" required ng-minlength="6" ng-maxlength="6" />
+    </div>
+  </div>
+
+    <div class="formInput">
+      <div>Phone</div>
+      <input id="phone" type="number" ng-model="address.phone" required ng-minlength="10" ng-maxlength="10" />
+    </div>
+  </div>
+
+  <div id="checkoutOrder">
+    <div class="heading">OrderSummary</div>
+    <div class="orderRow">
+      <div class="orderName">ItemName</div>
+      <div class="orderCount">Count</div>
+      <div class="orderAmount">Amount</div>
+    </div>
+    <hr/>
+
+    <div class="orderRow" ng-repeat="(key,val) in order">
+      <div class="orderName">{{key}}</div>
+      <div class="orderCount">{{val.count}}</div>
+      <div class="orderAmount" >Rs {{val.amount}}</div>
+    </div>
+
+    <hr  />
+    <div class="orderRow">
+      <div class="orderName">Total Items</div>
+      <div class="orderCount">{{totalItems}}</div>
+      <div class="orderAmount" >Rs {{totalPrice}}</div>
+
+    </div>
+  </div>
+
+  <div class="buttonContainer">
+    <input type="button" class="buttonStyle"  ng-click="onConfirmOrder()" value="Confrim Order"  />
+
+  </div>
+
+  <div>
+    {{message}}
+  </div>
+
+</div>

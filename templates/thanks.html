@@ -1,0 +1,42 @@
+<div ng-controller="thanksController">
+  <div class="heading">Thank You</div>
+
+  <div>
+    Thank You {{address.firstName}}  {{address.lastName}}
+  </div>
+  <br/>
+  <br/>
+
+  <div>
+    We have received Your Order Id for {{orderId}} for Rs {{orderAmount}}
+  </div>
+<br/>
+<br/>
+<div>
+  We will deliver your order to following address:
+  <div>
+    {{address.address1}}
+  </div>
+  <div>
+    {{address.address2}}
+  </div>
+  <div>
+    {{address.city}}
+  </div>
+  <div>
+    {{address.state}}
+  </div>
+  <div>
+    {{address.pin}}
+  </div>
+  <br />
+  <div>
+    {{address.phone}}
+  </div>
+</div>
+
+<div class="buttonContainer">
+  <input type="button" class="buttonStyle"  ng-click="goBackHome()" value="Go Back To Home"  />
+
+</div>
+</div>

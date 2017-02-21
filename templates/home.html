@@ -1,0 +1,57 @@
+<div ng-controller="homeController" id="home">
+  <div id="homeContainer">
+    <div id="menu">
+        <h4>Menu</h4>
+        <div ng-repeat = "(key,val) in menu">
+          <h4 class="dishType">{{key}}</h4>
+
+          <div class="dishHeader">
+            <div class="dishHeaderSNo">S.No</div>
+            <div class="dishNameHeader">Item Name</div>
+            <div class="priceHeader">Price</div>
+          </div>
+          <hr/>
+
+        </hr/>
+          <div class="individualDishRow" ng-repeat = "dish in val">
+            <div class="dishIndex">{{$index+1}}</div>
+            <div class="dishName">{{dish.name}}</div>
+            <div class="dishPrice">Rs {{dish.price}}</div>
+            <div class="dishIcon" ng-click="dishOrdered(dish)">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+            <div class="dishIcon" ng-click="dishRemoved(dish)" ng-disabled="isDisabled(dish)">
+              <i class="fa fa-minus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div id="order">
+      <h4>Order</h4>
+      <div class="orderRow">
+        <div class="orderName">ItemName</div>
+        <div class="orderCount">Count</div>
+        <div class="orderAmount">Amount</div>
+      </div>
+      <hr/>
+
+      <div class="orderRow" ng-repeat="(key,val) in order">
+        <div class="orderName">{{key}}</div>
+        <div class="orderCount">{{val.count}}</div>
+        <div class="orderAmount" >Rs {{val.amount}}</div>
+      </div>
+
+      <hr  />
+      <div class="orderRow">
+        <div class="orderName">Total Items</div>
+        <div class="orderCount">{{totalItems}}</div>
+        <div class="orderAmount" >Rs {{totalPrice}}</div>
+
+      </div>
+
+      <input type="button" class="buttonStyle"  ng-click="onCheckout()" value="Checkout"  />
+    </div>
+  </div>
+</div>
